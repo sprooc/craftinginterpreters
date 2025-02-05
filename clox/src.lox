@@ -1,0 +1,19 @@
+class A {
+  init(n) {
+    print n;
+    print "A.init()";
+  }
+  foo() {
+    print "A.foo";
+  }
+}
+
+class B < A {
+  foo() {
+    super.foo();
+    print "B.foo()";
+  }
+}
+
+var a = B(1);
+a.foo();
